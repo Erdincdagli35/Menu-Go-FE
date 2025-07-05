@@ -1,0 +1,75 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background: linear-gradient(to bottom right, #f7ecff, #fef6ff, #f0faff);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  
+  .menu-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(8px);
+  }
+  
+  .menu-title {
+    text-align: center;
+    color: #7d5ba6; /* Lavanta - Zambak rengi */
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #e0dff1;
+  }
+  
+  thead {
+    background: linear-gradient(to right, #ffe1f0, #d6e6f2);
+    color: #555;
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+  }
+  
+  tbody tr:hover {
+    background-color: #f3f0f8;
+  }
+  
+  td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: #4a90e2;
+  }
+  
+  .alert {
+    text-align: center;
+    background-color: #fff3cd;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    color: #856404;
+  }
+  
+  .alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  

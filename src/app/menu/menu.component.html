@@ -1,0 +1,24 @@
+<div class="menu-container">
+    <h1 class="menu-title">Teras Otel Menü</h1>
+  
+    <div *ngIf="isLoading" class="alert">Yükleniyor...</div>
+    <div *ngIf="hasError" class="alert alert-error">Menü verisi alınamadı.</div>
+  
+    <table *ngIf="!isLoading && !hasError">
+      <thead>
+        <tr>
+          <th>Ürün</th>
+          <th>Açıklama</th>
+          <th>Fiyat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of menuItems">
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.price | number:'1.2-2' }}₺</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
