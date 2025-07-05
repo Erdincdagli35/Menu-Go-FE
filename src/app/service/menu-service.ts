@@ -9,7 +9,8 @@ import { MenuItem } from '../model/menu';
 })
 export class MenuService {
 
-  private baseURL = "http://localhost:8080/api/menu";
+  //private baseURL = "http://localhost:8080/api/menu";
+  private baseURL = 'https://menu-go-be.up.railway.app/api/menu';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -61,7 +61,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "menu-go-fe:build:production"
+              "browserTarget": "menu-go-fe:build",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
               "browserTarget": "menu-go-fe:build:development"
