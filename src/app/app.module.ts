@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BeachMenuComponent } from './beach-menu/beach-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    BeachMenuComponent
   ],
   imports: [
     BrowserModule,
