@@ -7,7 +7,7 @@ import { BeachMenuComponent } from './beach-menu/beach-menu.component';
 const routes: Routes = [
   { path: '', redirectTo: 'menu/restaurant', pathMatch: 'full' },
   { path: 'menu/restaurant', component: MenuComponent },
-  { path: 'menu/beach', component: BeachMenuComponent },
+  { path: 'menu/plaj', component: BeachMenuComponent },
   { path: '**', redirectTo: 'menu/restaurant' }
 ];
 
