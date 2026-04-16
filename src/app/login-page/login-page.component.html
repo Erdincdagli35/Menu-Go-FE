@@ -1,0 +1,40 @@
+<div class="admin-login-overlay" *ngIf="showAdminLogin">
+  <div class="admin-login-modal">
+
+    <h2>Yönetici Paneli</h2>
+    <p class="subtitle">Yetkili giriş</p>
+
+    <div class="input-group">
+      <input 
+        type="text"
+        name="username"
+        [(ngModel)]="username"
+        required
+      />
+      <label>Kullanıcı Adı</label>
+    </div>
+
+    <div class="input-group">
+      <input 
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+      />
+      <label>Şifre</label>
+    </div>
+
+    <button class="login-btn" (click)="login()">
+      Giriş Yap
+    </button>
+
+    <button class="cancel-btn" (click)="cancel()">
+      Vazgeç
+    </button>
+
+    <p class="error" *ngIf="loginError">
+      Kullanıcı adı veya şifre hatalı
+    </p>
+
+  </div>
+</div>

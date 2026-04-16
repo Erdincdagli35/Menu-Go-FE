@@ -1,0 +1,43 @@
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.8rem;
+  background: linear-gradient(180deg, #faf7f1, #f5f1e9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #3a4a3a;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.translation-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3a4a3a, #5a705a);
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-secondary {
+  border-radius: 10px;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+  width: auto;
+  max-width: 250px; /* 🔥 burayı ayarla */
+}

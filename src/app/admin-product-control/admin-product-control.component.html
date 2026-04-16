@@ -1,0 +1,50 @@
+<div class="menu-container">
+
+  <!-- Logo -->
+  <div class="logo-wrapper">
+    <img src="assets/logo.jpg" alt="Teras Otel Logo" />
+  </div>
+
+  <h1 class="menu-title">Yönetici Paneli</h1>
+  <h4 class="menu-title2">Ürün İşlemleri</h4>
+  <!-- Add button -->
+  <div class="admin-actions">
+    <button class="add-btn" (click)="addItem()">+ Ürün Ekle</button>
+    <button class="menu-btn" (click)="goToMenu()">Plaj Menüsü</button>
+  </div>
+
+  <div *ngIf="isLoading" class="alert">Yükleniyor...</div>
+  <div *ngIf="hasError" class="alert alert-error">Veri alınamadı.</div>
+
+  <div class="table-wrapper" *ngIf="!isLoading && !hasError">
+    <table>
+      <tbody>
+        <tr *ngFor="let item of items">
+
+          <td class="item-name">
+            {{ item.name }} 
+            <div class="item-description">
+            {{ item.description }}  
+            </div>
+          </td>
+
+          <td class="item-price">
+            {{ item.price | number:'1.0-0' }} ₺
+          </td> &nbsp; &nbsp; &nbsp;
+
+          <!-- 🔥 ACTIONS -->
+          <td class="item-actions">
+            <button class="edit-btn" (click)="editItem(item.id)">Düzenle</button> 
+            <button class="delete-btn" (click)="deleteItem(item.id)">Sil</button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="items.length === 0" class="no-items">
+      Ürün bulunmamaktadır.
+    </div>
+
+  </div>
+</div>

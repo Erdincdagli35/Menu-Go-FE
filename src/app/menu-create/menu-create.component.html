@@ -1,0 +1,85 @@
+<div class="container">
+  <h3>Yeni Ürün Oluştur</h3>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <!-- CATEGORY -->
+    <div class="mb-3">
+        <ul class="dropdown-menu w-100"
+            [class.show]="dropdownOpen"
+            style="display: block;"
+            *ngIf="dropdownOpen">
+
+          <li *ngFor="let c of filteredCategories">
+            <a class="dropdown-item" (click)="selectCategory(c)">
+              {{ c }}
+            </a>
+          </li>
+
+          
+        </ul>
+        
+    </div>
+
+    <label class="form-label">Kategori</label>
+
+      <div class="dropdown w-100">
+        <button 
+          class="btn btn-outline-primary w-100 dropdown-toggle"
+          type="button"
+          (click)="toggleDropdown()">
+
+          {{ category?.value || 'Kategori Seç' }}
+        </button>
+      </div>
+
+    <!-- PRICE -->
+    <div class="mb-3">
+      <label class="form-label">Fiyat</label>
+      <input type="number" formControlName="price" class="form-control" />
+
+      <div *ngIf="price?.touched && price?.invalid" class="text-danger">
+        Geçerli fiyat gir
+      </div>
+    </div>
+
+    <!-- TRANSLATIONS -->
+    <div formArrayName="translations">
+
+      <div *ngFor="let t of translations.controls; let i = index"
+           [formGroupName]="i"
+           class="mb-4 p-3 border rounded">
+
+        <h5>{{ t.get('lang')?.value }}</h5>
+
+        <!-- NAME -->
+        <div class="mb-2">
+          <label>Ad</label>
+          <input formControlName="name" class="form-control" />
+
+          <div *ngIf="t.get('name')?.touched && t.get('name')?.invalid" class="text-danger">
+            Zorunlu alan
+          </div>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="mb-2">
+          <label>Açıklama</label>
+          <textarea formControlName="description" class="form-control"></textarea>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ACTIONS -->
+    <button type="submit" class="btn btn-primary" [disabled]="submitting">
+      Kaydet
+    </button>
+
+    <button type="button" class="btn btn-secondary ms-2" (click)="cancel()">
+      İptal
+    </button>
+
+  </form>
+</div>

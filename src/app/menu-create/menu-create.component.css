@@ -1,0 +1,139 @@
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.8rem;
+  background: linear-gradient(180deg, #faf7f1 0%, #f5f1e9 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.12),
+    inset 0 0 20px rgba(0, 0, 0, 0.03);
+  animation: fadeInScale 0.35s ease;
+}
+
+/* Title */
+.container h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #3a4a3a;
+  font-weight: 700;
+}
+
+/* Labels */
+.form-label {
+  font-size: 0.85rem;
+  color: #6e6e6e;
+  margin-bottom: 0.3rem;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  padding: 0.6rem 0.7rem;
+  font-family: 'Merriweather', serif;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+/* Focus */
+.form-control:focus {
+  border-color: #3a4a3a;
+  box-shadow: 0 0 0 2px rgba(58, 74, 58, 0.15);
+}
+
+/* Dropdown button */
+.dropdown-toggle {
+  border-radius: 12px;
+  padding: 0.6rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* Dropdown hover */
+.dropdown-toggle:hover {
+  background: #f0ede6;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  min-width: 200px;
+  width: auto;
+  max-width: 250px; /* 🔥 burayı ayarla */
+}
+
+/* Dropdown item */
+.dropdown-item {
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(58, 74, 58, 0.1);
+}
+
+/* Translation cards */
+[formGroupName] {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    inset 0 0 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Language title */
+[formGroupName] h5 {
+  margin-bottom: 0.8rem;
+  color: #3a4a3a;
+  font-weight: 600;
+}
+
+/* Error text */
+.text-danger {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #3a4a3a, #5a705a);
+  border: none;
+  border-radius: 12px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(58, 74, 58, 0.25);
+}
+
+/* Cancel button */
+.btn-secondary {
+  border-radius: 12px;
+  padding: 0.6rem 1.2rem;
+  background: #e5e5e5;
+  border: none;
+  color: #3a4a3a;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: #d6d6d6;
+}
+
+/* Animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
