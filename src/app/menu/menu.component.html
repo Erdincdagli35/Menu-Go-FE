@@ -1,5 +1,8 @@
 <div class="menu-container">
 
+  <div class="admin-panel">
+    <button (click)="navigateToAdminPanel()">Yönetici Paneli</button>
+  </div>
   
   <div class="language-switcher">
     <button (click)="changeLanguage('TR')" [class.active]="currentLang === 'TR'">🇹🇷 Türkçe</button>
@@ -12,7 +15,7 @@
     <img src="assets/logo.jpg" alt="Teras Otel Zakkum Logo" />
   </div> 
 
-  <h1 class="menu-title">Restaurant Menü</h1>
+  <h1 class="menu-title">Plaj Menüsü</h1>
 
   <div *ngIf="isLoading" class="alert">Yükleniyor...</div>
   <div *ngIf="hasError" class="alert alert-error">Menü verisi alınamadı.</div>

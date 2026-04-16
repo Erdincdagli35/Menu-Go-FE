@@ -48,7 +48,15 @@
 /* Başlık */
 .menu-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #3a4a3a;
+}
+
+.menu-title2 {
+  text-align: center;
+  font-size: 1,5rem;
   font-weight: 700;
   margin-bottom: 2rem;
   color: #3a4a3a;
@@ -83,6 +91,38 @@
   text-decoration: underline;
 }
 
+.admin-panel {
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-family: 'Merriweather', serif;
+}
+
+.admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.admin-panel button {
+  all: unset;
+  font-size: 1rem;
+  color: #3a4a3a;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.admin-panel button:hover {
+  color: #5a705a;
+  text-decoration: underline;
+}
+
+.admin-panel button.active {
+  color: #2f3f2f;
+  text-decoration: underline;
+}
 /* Kategori butonları */
 .category-nav {
   display: flex;
@@ -189,6 +229,81 @@ tbody tr:hover {
 /* Geçiş efekti her şeye */
 * {
   transition: all 0.3s ease-in-out;
+}
+
+button {
+  font-family: 'Merriweather', serif;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  border-radius: 10px;
+  font-weight: 600;
+}
+  
+ .add-btn {
+  background: linear-gradient(135deg, #3a4a3a, #5a705a);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(58, 74, 58, 0.15);
+  font-family: 'Merriweather', serif;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(58, 74, 58, 0.25);
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #3a4a3a, #5a705a);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(58, 74, 58, 0.15);
+  font-family: 'Merriweather', serif;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  background: #f5f1e9;
+  color: #3a4a3a;
+  border: 1px solid #dcdcdc;
+  margin-left: 50px;
+}
+
+.edit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(58, 74, 58, 0.25);
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #3a4a3a, #5a705a);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(58, 74, 58, 0.15);
+  font-family: 'Merriweather', serif;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  background: #f5f1e9;
+  color: #3a4a3a;
+  border: 1px solid #dcdcdc;
+  margin-left: 50px;
+}
+
+.delete-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(58, 74, 58, 0.25);
 }
 
 /* Responsive */

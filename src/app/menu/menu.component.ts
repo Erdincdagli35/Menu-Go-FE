@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router} from '@angular/router';
 
 import { MenuItem } from '../model/menu';
 import { MenuService } from '../service/menu-service';
 import { Category } from '../model/category';
+import { MenuResponse } from '../model/menu-response';
 
 @Component({
   selector: 'app-menu',
@@ -10,15 +12,20 @@ import { Category } from '../model/category';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  menuItems: MenuItem[] = [];
+  menuItems: MenuResponse[] = [];
   isLoading: boolean = true;
   hasError: boolean = false;
   categories = Object.values(Category);
   selectedCategory: Category | null = null;
   currentLang: string = 'TR'; // ✅ Varsayılan dil
 
-  constructor(private menuService: MenuService) {}
+  isAdminMode: boolean = false ;
+    showAdminLogin: boolean = false ;
+    adminPassword: string = "" ;
 
+   constructor(private menuService: MenuService,
+                private route: ActivatedRoute, private router: Router
+    ) {}
   ngOnInit(): void {
     this.fetchMenu();
   }
@@ -74,11 +81,17 @@ export class MenuComponent {
     return category;
   }
 
-  getItemsByCategory(category: Category): MenuItem[] {
+  getItemsByCategory(category: Category): MenuResponse[] {
     return this.menuItems.filter(item => item.category === category);
   }
 
   selectCategory(category: Category) {
     this.selectedCategory = category;
+  }
+
+  navigateToAdminPanel() {
+    this.router.navigate(['admin/login']).then(() => {
+        window.location.reload();
+      });
   }
 }
