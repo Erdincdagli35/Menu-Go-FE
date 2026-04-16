@@ -13,8 +13,8 @@ export class MenuService {
   isLoading = false;
   hasError = false;
 
-  private baseURL = "http://localhost:8080/api/menu";
-  //private baseURL = 'https://menu-go-be-production.up.railway.app/api/menu';
+  //private baseURL = "http://localhost:8080/api/menu";
+  private baseURL = 'https://menu-go-be-production.up.railway.app/api/menu';
 
   constructor(private httpClient: HttpClient) { }
 
